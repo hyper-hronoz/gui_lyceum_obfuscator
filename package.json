@@ -1,0 +1,18 @@
+{
+  "name": "gui_lyceum_obfuscator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.3.1"
+  },
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "utf8": "^3.0.0"
+  }
+}

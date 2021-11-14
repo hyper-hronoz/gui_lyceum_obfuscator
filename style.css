@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+}
+
+#output_text_area, #input_text_area {
+	width: 50%;
+	height: 100vh;
+}

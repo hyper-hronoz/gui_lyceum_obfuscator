@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<link rel="stylesheet" href="style.css">
+	<title>Hello World!</title>
+</head>
+
+<body>
+	<div class="container">
+		<textarea name="input_text_area" id="input_text_area" cols="30" rows="10"
+			placeholder="paste code here"></textarea>
+		<textarea name="output_text_area" id="output_text_area" cols="30" rows="10"
+			placeholder="here you will see obfuscated code"></textarea>
+	</div>
+
+<script src="./node_modules/base-64/base64.js"></script>
+<script src="./node_modules/utf8/utf8.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
