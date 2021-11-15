@@ -1,5 +1,6 @@
 const inputArea = document.querySelector("#input_text_area")
 const outputArea = document.querySelector("#output_text_area")
+const complexity = document.querySelector("#complexity")
 
 const obfuscate = (finalTaskSolution) => {
 	console.log("works");
@@ -24,10 +25,32 @@ eval(compile(b64decode(hidden.decode()), "<string>", "exec"))
     `;
 }
 
-inputArea.addEventListener("input", () => {
+function isNumeric(value) {
+    return /^-?\d+$/.test(value);
+}
+
+const update = () => {
+
 	if (inputArea.value == "") {
 		outputArea.value = ""
 		return
 	}
-	outputArea.value = obfuscate(inputArea.value + `\n\n`)
+
+	obfuscated = obfuscate(inputArea.value)
+
+    if (isNumeric(complexity.value)) {
+        for (let i = 1; i < parseInt(complexity.value); i++) {
+            obfuscated = obfuscate(obfuscated)
+        }
+    }
+
+    outputArea.value = obfuscated
+}
+
+inputArea.addEventListener("input", () => {
+    update()
+})
+
+complexity.addEventListener("input", () => {
+    update()
 })
